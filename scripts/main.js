@@ -15,6 +15,38 @@ const users = {
         group: 2
     },
 
+    Muslim: {
+        group: 2
+    },
+
+    Mirad: {
+        group: 2
+    },
+
+    Zaure: {
+        group:2
+    },
+
+    Guldana: {
+        group:2
+    },
+
+    Radin: {
+        group: 2
+    },
+
+    Dair: {
+        group: 2
+    },
+
+    Sabina: {
+        group: 2
+    },
+
+    Sogdiana: {
+        group: 2
+    },
+
 
     Ilia: {
         group: 1
@@ -32,7 +64,27 @@ const users = {
         group: 1
     },
 
-    Dair: {
+    Polina: {
+        group: 1
+    },
+
+    Medina: {
+        group: 1
+    },
+
+    Daniel: {
+        group: 1
+    },
+
+    Eldos: {
+        group:1
+    },
+
+    Nurbol: {
+        group: 1
+    },
+
+    Denislam: {
         group: 1
     }
 };
@@ -336,7 +388,7 @@ function askUser() {
 
     while (!user) {
         const name = prompt(
-            "1 Группа: Ilia, Ruslan, Dastan, Aidana \n \n2 группа: Fatima, Gulina, Muslim, Asel, Abdulaziz, Dair \n \n Введите ваше имя:"
+            "1 Группа: Ilia, Ruslan, Dastan, Aidana, Medina, Polina, Eldos, Nurbol, Daniel, Denislam \n \n2 группа: Fatima, Gulina, Muslim, Asel, Abdulaziz, Dair, Mirad, Zaure, Guldana, Sogdiana, Sabina, Radin,  \n \n Введите ваше имя:"
         );
 
         if (name === null) {
