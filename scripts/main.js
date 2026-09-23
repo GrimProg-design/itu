@@ -37,7 +37,7 @@ const users = {
     }
 };
 
-const NUMERATOR_START_DATE = "2026-09-21";
+const NUMERATOR_START_DATE = "2026-09-28";
 
 const dayNames = {
     monday: "Понедельник",
