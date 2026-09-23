@@ -282,7 +282,7 @@ const schedule = {
         }
     }
 };
-
+// Просто для прогрузки GitHub Pages
 let currentUser = null;
 let currentGroup = null;
 let currentWeek = null;
