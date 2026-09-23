@@ -1,39 +1,39 @@
 const users = {
     Fatima: {
-        group: 1
+        group: 2
     },
 
     Gulina: {
-        group: 1
+        group: 2
     },
 
     Abdulaziz: {
-        group: 1
+        group: 2
     },
 
     Asel: {
-        group: 1
+        group: 2
     },
 
 
     Ilia: {
-        group: 2
+        group: 1
     },
 
     Dastan: {
-        group: 2
+        group: 1
     },
 
     Aidana: {
-        group: 2
+        group: 1
     },
 
     Ruslan: {
-        group: 2
+        group: 1
     },
 
     Dair: {
-        group: 2
+        group: 1
     }
 };
 
@@ -288,13 +288,10 @@ let currentGroup = null;
 let currentWeek = null;
 
 function findUser(name) {
-    const normalizedName =
-        name.trim().toLowerCase();
+    const normalizedName = name.trim().toLowerCase();
 
-    const userName =
-        Object.keys(users).find(
-            user =>
-                user.toLowerCase() === normalizedName
+    const userName = Object.keys(users).find(
+            user => user.toLowerCase() === normalizedName
         );
 
     if (!userName) {
@@ -309,12 +306,9 @@ function findUser(name) {
 
 function getCurrentWeek() {
     const startDate = new Date(NUMERATOR_START_DATE);
-
     const today = new Date();
     startDate.setHours(0, 0, 0, 0);
-
     today.setHours(0, 0, 0, 0);
-
     const difference = today.getTime() - startDate.getTime();
 
     const days = Math.floor(
@@ -326,7 +320,6 @@ function getCurrentWeek() {
     if (weeks % 2 === 0) {
         return "numerator";
     }
-
     return "denominator";
 }
 
@@ -343,7 +336,7 @@ function askUser() {
 
     while (!user) {
         const name = prompt(
-            "Введите ваше имя:"
+            "1 Группа: Ilia, Ruslan, Dastan, Aidana \n \n2 группа: Fatima, Gulina, Muslim, Asel, Abdulaziz, Dair \n \n Введите ваше имя:"
         );
 
         if (name === null) {
