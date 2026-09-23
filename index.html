@@ -3,38 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="styles/main.css" />
-
     <title>Расписание</title>
   </head>
-
   <body>
-    <header>
-      <h1 id="schedule_day">Расписание</h1>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-top">
+          <div>
+            <div class="eyebrow">Университет</div>
 
-      <div id="user_info"></div>
+            <h1 id="schedule_day">Расписание</h1>
+          </div>
 
-      <div class="nav">
-        <button class="btn" data-day="monday">Понедельник</button>
-        <button class="btn" data-day="tuesday">Вторник</button>
-        <button class="btn" data-day="wednesday">Среда</button>
-        <button class="btn" data-day="thursday">Четверг</button>
-        <button class="btn" data-day="friday">Пятница</button>
-        <button class="btn" data-day="saturday">Суббота</button>
-        <button class="btn" data-day="all">Все</button>
+          <button id="change_user" class="change-user">
+            Сменить пользователя
+          </button>
+        </div>
+
+        <div class="user-card">
+          <div class="user-avatar" id="user_avatar">?</div>
+
+          <div class="user-details">
+            <div class="user-name" id="user_name">Пользователь</div>
+
+            <div class="user-meta">
+              <span id="user_group"> Группа </span>
+              <span class="separator">•</span>
+              <span id="user_week"> Неделя </span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="btn active" data-day="all">Вся неделя</button>
+          <button class="btn" data-day="monday">Понедельник</button>
+          <button class="btn" data-day="tuesday">Вторник</button>
+          <button class="btn" data-day="wednesday">Среда</button>
+          <button class="btn" data-day="thursday">Четверг</button>
+          <button class="btn" data-day="friday">Пятница</button>
+          <button class="btn" data-day="saturday">Суббота</button>
+        </nav>
       </div>
-
-      <button id="change_user">Сменить пользователя</button>
     </header>
 
     <main>
-      <div class="content"></div>
+      <div class="content" id="content"></div>
     </main>
 
-    <footer>
-      <!-- created by grimmy, designed by grimmy, schedule by Aidana -->
-    </footer>
+    <footer>Schedule • made by Grimmy</footer>
 
     <script src="scripts/main.js"></script>
   </body>

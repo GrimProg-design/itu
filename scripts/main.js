@@ -1,431 +1,545 @@
-const numerator = [
-    "Fatima",
-    "Gulina",
-    "Abdulaziz",
-    "Asel"
-];
-
-const denominator = [
-    "Ilia",
-    "Dastan",
-    "Aidana",
-    "Ruslan",
-    "Dair"
-];
-
-
-// ----------------------------------------
-// РАСПИСАНИЕ ЧИСЛИТЕЛЬНОЙ НЕДЕЛИ
-// ----------------------------------------
-
-const numeralSchedule = {
-
-    monday: {
-        10: "-",
-        11: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
-        13: "Web-программирование (Лекция)",
-        15: "Web-программирование (Лабораторная)",
-        16: "-"
+const users = {
+    Fatima: {
+        group: 1
     },
 
-    tuesday: {
-        10: "-",
-        11: "-",
-        13: "Программирование на JAVA, Android, iOS (Лабораторная)",
-        15: "Программирование на JAVA, Android, iOS (Лабораторная)",
-        16: "-"
+    Gulina: {
+        group: 1
     },
 
-    wednesday: {
-        10: "-",
-        11: "-",
-        13: "Безопасность и Жизнедеятельность (Лекция)",
-        15: "-",
-        16: "-"
+    Abdulaziz: {
+        group: 1
     },
 
-    thursday: {
-        10: "-",
-        11: "Распределенные системы управления (лекция)",
-        13: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
-        15: "-",
-        16: "-"
+    Asel: {
+        group: 1
     },
 
-    friday: {
-        10: "-",
-        11: "-",
-        13: "Программирование на JAVA, Android, iOS (Лекция)",
-        15: "Программирование на JAVA, Android, iOS (Лекция)",
-        16: "-"
+
+    Ilia: {
+        group: 2
     },
 
-    saturday: {
-        10: "-",
-        11: "-",
-        13: "-",
-        15: "-",
-        16: "-"
+    Dastan: {
+        group: 2
+    },
+
+    Aidana: {
+        group: 2
+    },
+
+    Ruslan: {
+        group: 2
+    },
+
+    Dair: {
+        group: 2
     }
 };
 
+const NUMERATOR_START_DATE = "2026-09-21";
 
-// ----------------------------------------
-// РАСПИСАНИЕ ЗНАМЕНАТЕЛЬНОЙ НЕДЕЛИ
-// ----------------------------------------
-
-const significantSchedule = {
-
-    monday: {
-        10: "-",
-        11: "Схематехника и программирование микроконтроллерных систем (Лекция)",
-        13: "Web-программирование (Лекция)",
-        15: "Web-программирование (Лабораторная)",
-        16: "-"
-    },
-
-    tuesday: {
-        10: "Распределенные системы управления (лабораторная)",
-        11: "Распределенные системы управления (лабораторная)",
-        13: "-",
-        15: "-",
-        16: "-"
-    },
-
-    wednesday: {
-        10: "-",
-        11: "-",
-        13: "Безопасность и Жизнедеятельность (Лекция)",
-        15: "-",
-        16: "-"
-    },
-
-    thursday: {
-        10: "Безопасность и жизнедеятельность (лабораторная)",
-        11: "Распределенные системы управления (лекция)",
-        13: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
-        15: "-",
-        16: "-"
-    },
-
-    friday: {
-        10: "-",
-        11: "-",
-        13: "Программирование на JAVA, Android, iOS (Лекция)",
-        15: "Программирование на JAVA, Android, iOS (Лекция)",
-        16: "-"
-    },
-
-    saturday: {
-        10: "-",
-        11: "-",
-        13: "-",
-        15: "-",
-        16: "-"
-    }
+const dayNames = {
+    monday: "Понедельник",
+    tuesday: "Вторник",
+    wednesday: "Среда",
+    thursday: "Четверг",
+    friday: "Пятница",
+    saturday: "Суббота"
 };
 
+const lessonTimes = [
+    {
+        key: 10,
+        time: "10:00 — 11:20"
+    },
 
-// ----------------------------------------
-// ТЕКУЩИЙ ПОЛЬЗОВАТЕЛЬ
-// ----------------------------------------
+    {
+        key: 11,
+        time: "11:30 — 12:50"
+    },
+
+    {
+        key: 13,
+        time: "13:00 — 14:20"
+    },
+
+    {
+        key: 15,
+        time: "15:00 — 16:20"
+    },
+
+    {
+        key: 16,
+        time: "16:30 — 17:50"
+    }
+];
+
+const schedule = {
+    numerator: {
+        group1: {
+            monday: {
+                10: "-",
+                11: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
+                13: "Web-программирование (Лекция)",
+                15: "Web-программирование (Лабораторная)",
+                16: "-"
+            },
+
+            tuesday: {
+                10: "-",
+                11: "-",
+                13: "Программирование на JAVA, Android, iOS (Лабораторная)",
+                15: "Программирование на JAVA, Android, iOS (Лабораторная)",
+                16: "-"
+            },
+
+            wednesday: {
+                10: "-",
+                11: "-",
+                13: "Безопасность и Жизнедеятельность (Лекция)",
+                15: "-",
+                16: "-"
+            },
+
+            thursday: {
+                10: "-",
+                11: "Распределенные системы управления (Лекция)",
+                13: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
+                15: "-",
+                16: "-"
+            },
+
+            friday: {
+                10: "-",
+                11: "-",
+                13: "Программирование на JAVA, Android, iOS (Лекция)",
+                15: "Программирование на JAVA, Android, iOS (Лекция)",
+                16: "-"
+            },
+
+            saturday: {
+                10: "-",
+                11: "-",
+                13: "-",
+                15: "-",
+                16: "-"
+            }
+        },
+
+        group2: {
+
+            monday: {
+                10: "-",
+                11: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
+                13: "Web-программирование (Лекция)",
+                15: "Web-программирование (Лабораторная)",
+                16: "-"
+            },
+
+            tuesday: {
+                10: "-",
+                11: "-",
+                13: "Программирование на JAVA, Android, iOS (Лабораторная)",
+                15: "Программирование на JAVA, Android, iOS (Лабораторная)",
+                16: "-"
+            },
+
+            wednesday: {
+                10: "-",
+                11: "-",
+                13: "Безопасность и Жизнедеятельность (Лекция)",
+                15: "-",
+                16: "-"
+            },
+
+            thursday: {
+                10: "-",
+                11: "Распределенные системы управления (Лекция)",
+                13: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
+                15: "-",
+                16: "-"
+            },
+
+            friday: {
+                10: "-",
+                11: "-",
+                13: "Программирование на JAVA, Android, iOS (Лекция)",
+                15: "Программирование на JAVA, Android, iOS (Лекция)",
+                16: "-"
+            },
+
+            saturday: {
+                10: "-",
+                11: "-",
+                13: "-",
+                15: "-",
+                16: "-"
+            }
+        }
+    },
+
+    denominator: {
+        group1: {
+            monday: {
+                10: "-",
+                11: "Схематехника и программирование микроконтроллерных систем (Лекция)",
+                13: "Web-программирование (Лекция)",
+                15: "Web-программирование (Лабораторная)",
+                16: "-"
+            },
+
+            tuesday: {
+                10: "Распределенные системы управления (Лабораторная)",
+                11: "Распределенные системы управления (Лабораторная)",
+                13: "-",
+                15: "-",
+                16: "-"
+            },
+
+            wednesday: {
+                10: "-",
+                11: "-",
+                13: "Безопасность и Жизнедеятельность (Лекция)",
+                15: "-",
+                16: "-"
+            },
+
+            thursday: {
+                10: "Безопасность и жизнедеятельность (Лабораторная)",
+                11: "Распределенные системы управления (Лекция)",
+                13: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
+                15: "-",
+                16: "-"
+            },
+
+            friday: {
+                10: "-",
+                11: "-",
+                13: "Программирование на JAVA, Android, iOS (Лекция)",
+                15: "Программирование на JAVA, Android, iOS (Лекция)",
+                16: "-"
+            },
+
+            saturday: {
+                10: "-",
+                11: "-",
+                13: "-",
+                15: "-",
+                16: "-"
+            }
+        },
+
+        group2: {
+
+            monday: {
+                10: "-",
+                11: "Схематехника и программирование микроконтроллерных систем (Лекция)",
+                13: "Web-программирование (Лекция)",
+                15: "Web-программирование (Лабораторная)",
+                16: "-"
+            },
+
+            tuesday: {
+                10: "Распределенные системы управления (Лабораторная)",
+                11: "Распределенные системы управления (Лабораторная)",
+                13: "-",
+                15: "-",
+                16: "-"
+            },
+
+            wednesday: {
+                10: "-",
+                11: "-",
+                13: "Безопасность и Жизнедеятельность (Лекция)",
+                15: "-",
+                16: "-"
+            },
+
+            thursday: {
+                10: "Безопасность и жизнедеятельность (Лабораторная)",
+                11: "Распределенные системы управления (Лекция)",
+                13: "Схематехника и программирование микроконтроллерных систем (Лабораторная)",
+                15: "-",
+                16: "-"
+            },
+
+            friday: {
+                10: "-",
+                11: "-",
+                13: "Программирование на JAVA, Android, iOS (Лекция)",
+                15: "Программирование на JAVA, Android, iOS (Лекция)",
+                16: "-"
+            },
+
+            saturday: {
+                10: "-",
+                11: "-",
+                13: "-",
+                15: "-",
+                16: "-"
+            }
+        }
+    }
+};
 
 let currentUser = null;
+let currentGroup = null;
 let currentWeek = null;
 
-
-// ----------------------------------------
-// ОПРЕДЕЛЯЕМ ГРУППУ ЧЕЛОВЕКА
-// ----------------------------------------
-
 function findUser(name) {
+    const normalizedName =
+        name.trim().toLowerCase();
 
-    const normalizedName = name.trim().toLowerCase();
+    const userName =
+        Object.keys(users).find(
+            user =>
+                user.toLowerCase() === normalizedName
+        );
 
-    const numeratorUser = numerator.find(
-        user => user.toLowerCase() === normalizedName
-    );
-
-    if (numeratorUser) {
-        return {
-            name: numeratorUser,
-            week: "numerator"
-        };
+    if (!userName) {
+        return null;
     }
 
-
-    const denominatorUser = denominator.find(
-        user => user.toLowerCase() === normalizedName
-    );
-
-    if (denominatorUser) {
-        return {
-            name: denominatorUser,
-            week: "denominator"
-        };
-    }
-
-
-    return null;
+    return {
+        name: userName,
+        group: users[userName].group
+    };
 }
 
+function getCurrentWeek() {
+    const startDate = new Date(NUMERATOR_START_DATE);
 
-// ----------------------------------------
-// СПРАШИВАЕМ ИМЯ
-// ----------------------------------------
+    const today = new Date();
+    startDate.setHours(0, 0, 0, 0);
+
+    today.setHours(0, 0, 0, 0);
+
+    const difference = today.getTime() - startDate.getTime();
+
+    const days = Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
+    const weeks = Math.floor(days / 7);
+
+    if (weeks % 2 === 0) {
+        return "numerator";
+    }
+
+    return "denominator";
+}
+
+function getWeekName(week) {
+    if (week === "numerator") {
+        return "Числительная неделя";
+    }
+
+    return "Знаменательная неделя";
+}
 
 function askUser() {
-
     let user = null;
 
     while (!user) {
-
         const name = prompt(
-            "Введите ваше имя:\n\n" +
-            "Fatima, Gulina, Abdulaziz, Asel\n" +
-            "Ilia, Dastan, Aidana, Ruslan, Dair"
+            "Введите ваше имя:"
         );
 
-
-        // Если пользователь нажал "Отмена"
         if (name === null) {
             return;
         }
 
-
         user = findUser(name);
-
 
         if (!user) {
             alert(
-                "Такого имени нет в списке.\n" +
-                "Попробуйте ввести имя еще раз."
+                "Такого имени нет в списке.\n\n" +
+                "Проверьте написание имени."
             );
         }
     }
 
-
     currentUser = user.name;
-    currentWeek = user.week;
+    currentGroup = user.group;
+    currentWeek = getCurrentWeek();
 
+    localStorage.setItem(
+        "scheduleUser",
+        currentUser
+    );
 
-    showUserInfo();
+    updateUserInfo();
     showSchedule("all");
 }
 
+function updateUserInfo() {
+    const userName = document.getElementById("user_name");
+    const userGroup = document.getElementById("user_group");
+    const userWeek = document.getElementById("user_week");
+    const userAvatar = document.getElementById("user_avatar");
 
-// ----------------------------------------
-// ПОКАЗЫВАЕМ ИНФОРМАЦИЮ О ПОЛЬЗОВАТЕЛЕ
-// ----------------------------------------
+    userName.textContent = currentUser;
 
-function showUserInfo() {
-
-    const userInfo = document.getElementById("user_info");
-
-    const weekName =
-        currentWeek === "numerator"
-            ? "числительная неделя"
-            : "знаменательная неделя";
+    userGroup.textContent = `Подгруппа ${currentGroup}`;
 
 
-    userInfo.textContent =
-        `Пользователь: ${currentUser} | ${weekName}`;
+    userWeek.textContent = getWeekName(currentWeek);
+
+    userAvatar.textContent =
+        currentUser.charAt(0).toUpperCase();
 }
 
-
-// ----------------------------------------
-// ПОЛУЧАЕМ РАСПИСАНИЕ ТЕКУЩЕГО ЧЕЛОВЕКА
-// ----------------------------------------
-
-function getCurrentSchedule() {
-
-    if (currentWeek === "numerator") {
-        return numeralSchedule;
-    }
-
-    return significantSchedule;
+function getUserSchedule() {
+    return schedule[currentWeek][
+        `group${currentGroup}`
+    ];
 }
-
-
-// ----------------------------------------
-// СОЗДАЕМ РАСПИСАНИЕ
-// ----------------------------------------
 
 function showSchedule(day) {
-
-    const content = document.querySelector(".content");
-
+    const content =
+        document.getElementById("content");
     content.innerHTML = "";
 
-
     if (day === "all") {
+        Object.keys(dayNames).forEach(
+            dayName => {
+                createDaySchedule(
+                    dayName,
+                    getUserSchedule()[dayName]
+                );
+            }
+        );
 
-        const schedule = getCurrentSchedule();
-
-        Object.keys(schedule).forEach(dayName => {
-
-            createDaySchedule(
-                dayName,
-                schedule[dayName]
-            );
-
-        });
-
-        document.getElementById("schedule_day").textContent =
-            "Расписание на неделю";
+        document.getElementById(
+            "schedule_day"
+        ).textContent = "Расписание на неделю";
 
         return;
     }
 
-
-    const schedule = getCurrentSchedule();
-
     createDaySchedule(
         day,
-        schedule[day]
+        getUserSchedule()[day]
     );
 
-
-    const dayNames = {
-        monday: "Понедельник",
-        tuesday: "Вторник",
-        wednesday: "Среда",
-        thursday: "Четверг",
-        friday: "Пятница",
-        saturday: "Суббота"
-    };
-
-
-    document.getElementById("schedule_day").textContent =
+    document.getElementById(
+        "schedule_day"
+    ).textContent =
         `Расписание на ${dayNames[day]}`;
 }
 
-
-// ----------------------------------------
-// СОЗДАЕМ ОДИН ДЕНЬ
-// ----------------------------------------
-
-function createDaySchedule(day, schedule) {
-
-    const content = document.querySelector(".content");
-
-
-    const dayBlock = document.createElement("div");
-
-    dayBlock.classList.add("day");
-
-
+function createDaySchedule(
+    day,
+    daySchedule
+) {
+    const content = document.getElementById("content");
+    const dayCard = document.createElement("section");
+    dayCard.className = "day";
+    const dayHeader = document.createElement("div");
+    dayHeader.className = "day-header";
     const title = document.createElement("h2");
-
-    const dayNames = {
-        monday: "Понедельник",
-        tuesday: "Вторник",
-        wednesday: "Среда",
-        thursday: "Четверг",
-        friday: "Пятница",
-        saturday: "Суббота"
-    };
-
-
+    title.className = "day-title";
     title.textContent = dayNames[day];
+    const badge = document.createElement("span");
+    badge.className = "week-badge";
+    badge.textContent = getWeekName(currentWeek);
+    dayHeader.appendChild(title);
+    dayHeader.appendChild(badge);
+    dayCard.appendChild(dayHeader);
 
-    dayBlock.appendChild(title);
+    lessonTimes.forEach(
+        lesson => {
+            const lessonElement = document.createElement("div");
+            lessonElement.className = "lesson";
+            const subject = daySchedule[lesson.key];
+            const time = document.createElement("div");
+            time.className = "lesson-time";
+            time.textContent = lesson.time;
+            const subjectElement = document.createElement("div");
+            subjectElement.className = "lesson-subject";
+            if (
+                subject === "-" ||
+                !subject
+            ) {
+                lessonElement.classList.add(
+                    "empty"
+                );
+                subjectElement.textContent =
+                    "Нет занятий";
+            } else {
+                subjectElement.textContent =
+                    subject;
+            }
+            lessonElement.appendChild(time);
+            lessonElement.appendChild(
+                subjectElement
+            );
+            dayCard.appendChild(
+                lessonElement
+            );
+        }
+    );
 
-
-    const times = [
-        ["10:00 / 11:20", 10],
-        ["11:30 / 12:50", 11],
-        ["13:00 / 14:20", 13],
-        ["15:00 / 16:20", 15],
-        ["16:30 / 17:50", 16]
-    ];
-
-
-    times.forEach(([time, lessonTime]) => {
-
-        const string = document.createElement("div");
-
-        string.classList.add("string");
-
-
-        const timeElement = document.createElement("div");
-
-        timeElement.classList.add("time");
-
-        timeElement.textContent = time;
-
-
-        const subject = document.createElement("div");
-
-        subject.classList.add("subject");
-
-        subject.textContent = schedule[lessonTime];
-
-
-        string.appendChild(timeElement);
-        string.appendChild(subject);
-
-
-        dayBlock.appendChild(string);
-    });
-
-
-    content.appendChild(dayBlock);
+    content.appendChild(dayCard);
 }
-
-
-// ----------------------------------------
-// НАВИГАЦИЯ
-// ----------------------------------------
 
 function initNavigation() {
-
     const buttons = document.querySelectorAll(".btn");
-
-
     buttons.forEach(button => {
+        button.addEventListener(
+            "click",
+            () => {
+                const day = button.dataset.day;
+                buttons.forEach(btn => {
+                    btn.classList.remove(
+                        "active"
+                    );
+                });
 
-        button.addEventListener("click", () => {
+                button.classList.add(
+                    "active"
+                );
 
-            const day = button.dataset.day;
-
-            showSchedule(day);
-
-        });
-
+                showSchedule(day);
+            }
+        );
     });
 }
 
+function initChangeUser() {
+    const button =
+        document.getElementById(
+            "change_user"
+        );
 
-// ----------------------------------------
-// СМЕНА ПОЛЬЗОВАТЕЛЯ
-// ----------------------------------------
-
-function initUserChange() {
-
-    const button = document.getElementById("change_user");
-
-
-    button.addEventListener("click", () => {
-
-        askUser();
-
-    });
+    button.addEventListener(
+        "click",
+        () => {
+            askUser();
+        }
+    );
 }
-
-
-// ----------------------------------------
-// ЗАПУСК
-// ----------------------------------------
 
 function main() {
-
     initNavigation();
-
-    initUserChange();
-
+    initChangeUser();
+    const savedUser =
+        localStorage.getItem(
+            "scheduleUser"
+        );
+    if (savedUser) {
+        const user = findUser(savedUser);
+        if (user) {
+            currentUser = user.name;
+            currentGroup = user.group;
+            currentWeek = getCurrentWeek();
+            updateUserInfo();
+            showSchedule("all");
+            return;
+        }
+    }
     askUser();
-
 }
 
 main();
