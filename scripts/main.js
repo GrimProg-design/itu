@@ -19,20 +19,12 @@ const users = {
         group: 2
     },
 
-    Mirad: {
-        group: 2
-    },
-
     Zaure: {
         group:2
     },
 
     Guldana: {
         group:2
-    },
-
-    Radin: {
-        group: 2
     },
 
     Dair: {
@@ -85,6 +77,14 @@ const users = {
     },
 
     Denislam: {
+        group: 1
+    },
+
+    Mirad: {
+        group: 1
+    },
+
+    Radin: {
         group: 1
     }
 };
