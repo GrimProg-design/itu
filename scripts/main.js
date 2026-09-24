@@ -86,6 +86,10 @@ const users = {
 
     Radin: {
         group: 1
+    },
+
+    Bactubeck: {
+        group: 1
     }
 };
 
@@ -388,7 +392,7 @@ function askUser() {
 
     while (!user) {
         const name = prompt(
-            "1 Группа: Ilia, Ruslan, Dastan, Aidana, Medina, Polina, Eldos, Nurbol, Daniel, Denislam \n \n2 группа: Fatima, Gulina, Muslim, Asel, Abdulaziz, Dair, Mirad, Zaure, Guldana, Sogdiana, Sabina, Radin,  \n \n Введите ваше имя:"
+            "1 Группа: Ilia, Ruslan, Dastan, Aidana, Medina, Polina, Eldos, Nurbol, Daniel, Denislam, Radin, Mirad, Bactubeck \n \n2 группа: Fatima, Gulina, Muslim, Asel, Abdulaziz, Dair, Zaure, Guldana, Sogdiana, Sabina  \n \n Введите ваше имя:"
         );
 
         if (name === null) {
