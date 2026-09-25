@@ -1,5 +1,5 @@
 const users = {
-    Fatima: {
+    Fatima: { // прости меня
         group: 2
     },
 
