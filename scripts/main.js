@@ -175,7 +175,7 @@ const schedule = {
                 11: "-",
                 13: "Программирование на JAVA, Android, iOS (Лекция) 2/333",
                 15: "Цифровые технологии в управлении (Лекция) 2/333",
-                16: "-"
+                16: "Безопасность жизнедеятельности (Практика) 2/537"
             },
 
             saturday: {
@@ -183,7 +183,7 @@ const schedule = {
                 11: "-",
                 13: "Цифровые технологии в управлении (Лабораторная) УЦ. НИАРС",
                 15: "Цифровые технологии в управлении (Лабораторная) УЦ. НИАРС",
-                16: "Безопасность жизнедеятельности (Практика) 2/537"
+                16: "-"
             }
         },
 
@@ -367,6 +367,9 @@ function findUser(name) {
 function getCurrentWeek() {
     const startDate = new Date(NUMERATOR_START_DATE);
     const today = new Date();
+
+    today.setDate(today.getDate() + 1);
+
     startDate.setHours(0, 0, 0, 0);
     today.setHours(0, 0, 0, 0);
     const difference = today.getTime() - startDate.getTime();
