@@ -4,6 +4,33 @@ const users = {
     group: 2,
   },
 
+  //   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠴⠂⠀⠐⠒⠤⢀⣀⢀⡤⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠋⢀⡄⠀⠀⠀⣠⠊⠀⠀⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠃⠀⡜⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⢀⠃⠀⠀⠀⡇⠀⡆⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⠀⠀⢸⠀⠀⠀⢠⠀⢰⢀⠀⠀⠀⠀⠘⠀⠀⡠⠐⠈⠉⠀⠀⠈⠉⠐⢤⡀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⣀⡀⠀⢠⡇⠀⠀⢸⠀⠀⠀⢸⠁⡜⠸⠀⠀⠀⠀⢸⡠⠊⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠙⡄⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣔⡉⠴⠆⣠⡤⣈⠑⢺⠀⠀⠀⢈⡀⠀⠀⡘⠀⡇⡄⠀⠀⠀⠀⢸⠀⠀⠀⠀⣀⣔⠮⠝⠒⠊⠉⠛⢳⡃⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠰⣏⢻⠋⠾⡆⠀⠀⠹⣌⢢⣸⣏⡆⡇⡇⠀⠀⠀⠀⡌⠀⢀⣴⡪⠋⠁⠀⢀⠤⠒⠉⡡⠄⠚⠒⣆
+  // ⠀⠀⠀⠀⠀⠀⠀⣠⠏⠒⠒⠠⢤⣀⠈⠚⢧⣄⢣⠀⢀⣀⠈⢻⡃⠘⡇⣇⠇⠀⠀⠀⢠⠃⠀⡩⠋⠀⠀⡠⠚⠁⠀⣠⠚⠢⠤⠤⠒⠁
+  // ⠀⠀⠀⢰⡲⣒⠈⠑⠒⠂⠤⠄⢠⠤⣍⠒⠤⡙⢿⣆⠘⡌⠉⣷⢻⡀⣿⠸⠁⠀⠀⠀⡌⢀⠞⠀⠀⢀⠎⠀⠀⢀⠞⠁⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠉⠒⠷⢆⠀⠀⠀⠀⠀⠓⠶⠵⢤⣈⡑⠝⢷⣽⡄⢿⣟⣷⢻⠀⠀⠀⡠⠎⣀⠬⠤⠤⢄⡀⠀⢀⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠑⣤⡠⠔⠒⣒⣀⡒⠒⢏⣻⣷⣦⣽⣿⣎⢿⡝⣿⣧⠀⡜⡵⠋⠀⠀⠀⠀⠀⠈⠙⢍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⢀⠤⠒⢉⡡⠔⠚⠉⠁⠀⠀⠀⠈⠉⠙⠀⠉⠛⠿⣿⣧⣿⣜⣿⣦⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⢀⠖⠁⣠⠔⠉⠀⠀⠀⠀⡠⠄⠐⣒⡤⠬⠭⠉⠉⠤⠴⠮⣿⣿⣿⣿⡿⣇⣤⣄⣀⣀⠀⠀⠠⠤⠄⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⡰⠁⢀⠖⠁⠀⠀⠀⠀⢀⡠⠔⠊⠉⠀⠀⠀⢀⣀⠤⠐⠒⠂⢰⠏⠓⠓⢻⢻⠋⠥⣒⠤⣉⠁⠒⠤⣀⠀⠀⢣⡀⠀⠀⠀⠀⠀⠀⠀
+  // ⢀⠇⣠⠇⠀⠀⠀⠀⡠⠞⠁⠀⠀⠀⣀⠤⠖⠈⠁⠀⠀⠀⠀⠀⡀⠀⠀⠀⠘⡆⢣⠀⠀⠑⢦⡑⠦⡀⠀⠁⠀⠀⠳⡄⠀⠀⠀⠀⠀⠀
+  // ⠸⣰⠁⠀⠀⢀⡴⠋⠀⠀⠀⡠⠔⠋⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠻⡀⠀⠀⠀⢱⠀⠱⡀⠀⠀⠘⢦⡈⠢⡀⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀
+  // ⠀⢇⠀⠀⡠⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡴⠋⠀⢠⣷⠤⣀⡀⠀⢣⣀⡈⠢⡀⠀⠀⠙⠢⣈⠓⢄⠀⠀⠘⡀⠀⠀⠀⠀
+  // ⠀⠸⠀⡰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡤⢲⡾⠋⡘⠀⠀⢀⢷⠁⠀⠀⢸⠉⠁⠀⠉⠉⠐⠢⢄⠀⠀⠈⠑⠢⠭⠂⢠⠇⠀⠀⠀⠀
+  // ⠀⢰⢾⣡⠞⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⡌⠀⠾⠁⢠⠁⠀⠀⡜⡆⠀⠀⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⠤⣀⡀⠀⣀⣸⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⢸⡇⠀⢸⠀⠀⠀⡇⡇⠀⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠁⠈⠀⠀⢸⠀⠀⠀⡇⠇⠀⡌⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠄⠀⠘⡀⠀⠀⡇⠀⢰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠱⡄⠀⠀⠀⢣⡀⠀⠸⠀⡟⠓⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠢⣀⠀⠀⠑⠂⣀⣃⢳⡀⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⠒⠋⠁⠀⠙⠽⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
   Gulina: {
     group: 2,
   },
@@ -562,10 +589,88 @@ function initSwitchWeek() {
   });
 }
 
+// для учителей
+
+function showTeachers() {
+  const content = document.getElementById("content");
+
+  content.innerHTML = "";
+
+  document.getElementById("schedule_day").textContent =
+    "Контакты преподавателей";
+
+  const teachersList = document.createElement("div");
+  teachersList.className = "teachers-list";
+
+  Object.values(teachers).forEach((teacher) => {
+    const card = document.createElement("section");
+    card.className = "teacher-card";
+
+    card.innerHTML = `
+            <div class="teacher-header">
+                <h2 class="teacher-name">${teacher.name}</h2>
+            </div>
+
+            <div class="teacher-info">
+
+                <div class="teacher-info-row">
+                    <span class="teacher-label">Предмет</span>
+                    <span class="teacher-value">${teacher.object}</span>
+                </div>
+
+                <div class="teacher-info-row">
+                    <span class="teacher-label">Формат</span>
+                    <span class="teacher-value">
+                        <span class="teacher-format">${teacher.format}</span>
+                    </span>
+                </div>
+
+                
+                <div class="teacher-info-row">
+                    <span class="teacher-label">Контакты</span>
+                  
+                    <div class="teacher-contacts">
+                  
+                        <a class="teacher-phone"
+                           href="tel:${teacher.number.replace(/[^+\d]/g, "")}">
+                            <span>Позвонить</span>
+                        </a>
+                  
+                        <a class="teacher-whatsapp"
+                           href="https://wa.me/${teacher.number.replace(/\D/g, "")}"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span>WhatsApp</span>
+                        </a>
+                  
+                    </div>
+                </div>
+
+
+            </div>
+        `;
+
+    teachersList.appendChild(card);
+  });
+
+  content.appendChild(teachersList);
+}
+
+function initTeachersButton() {
+  const button = document.getElementById("teachers-button");
+
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    showTeachers();
+  });
+}
+
 function main() {
   initNavigation();
   initChangeUser();
   initSwitchWeek();
+  initTeachersButton();
   const savedUser = localStorage.getItem("scheduleUser");
   if (savedUser) {
     const user = findUser(savedUser);

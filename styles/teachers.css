@@ -1,0 +1,210 @@
+.teachers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.teacher-card {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.teacher-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 24px rgba(25, 25, 40, 0.08);
+}
+
+.teacher-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.teacher-name {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+}
+
+.teacher-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-info-row {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  align-items: start;
+  gap: 15px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.teacher-info-row:last-child {
+  border-bottom: none;
+}
+
+.teacher-label {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.teacher-value {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.teacher-phone {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.teacher-phone:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.teacher-format {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 7px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.teacher-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+
+.teacher-phone,
+.teacher-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 11px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.teacher-phone {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.teacher-phone:hover {
+  background: #e5e1ff;
+  color: var(--accent-hover);
+}
+
+.teacher-whatsapp {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.teacher-whatsapp:hover {
+  background: #dff0e6;
+  color: #326d4b;
+}
+
+.teacher-phone:active,
+.teacher-whatsapp:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 700px) {
+  .teachers-list {
+    gap: 14px;
+  }
+
+  .teacher-header {
+    padding: 16px;
+  }
+
+  .teacher-name {
+    font-size: 16px;
+  }
+
+  .teacher-info-row {
+    grid-template-columns: 105px 1fr;
+    gap: 12px;
+    padding: 13px 16px;
+  }
+
+  .teacher-label {
+    font-size: 12px;
+  }
+
+  .teacher-value {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 450px) {
+  .teachers-list {
+    gap: 12px;
+  }
+
+  .teacher-card {
+    border-radius: 13px;
+  }
+
+  .teacher-header {
+    padding: 15px;
+  }
+
+  .teacher-name {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .teacher-info-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 12px 15px;
+  }
+
+  .teacher-label {
+    font-size: 11px;
+  }
+
+  .teacher-value {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .teacher-format {
+    font-size: 10px;
+  }
+
+  .teacher-contacts {
+    gap: 7px;
+  }
+
+  .teacher-phone,
+  .teacher-whatsapp {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
