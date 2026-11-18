@@ -1,4 +1,4 @@
-const teachers = {
+export const teachers = {
     Mamatbecov: {
         name: "Маматбеков Исламбек Маматбекович",
         object: "Схематехника и программирование микроконтроллерных систем",

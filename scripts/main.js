@@ -1,3 +1,6 @@
+import { initSupportBtn } from './support.js';
+import { teachers } from './teachers.js';
+
 const users = {
   Fatima: {
     // прости меня
@@ -628,21 +631,21 @@ function showTeachers() {
                 
                 <div class="teacher-info-row">
                     <span class="teacher-label">Контакты</span>
-                  
+
                     <div class="teacher-contacts">
-                  
+
                         <a class="teacher-phone"
                            href="tel:${teacher.number.replace(/[^+\d]/g, "")}">
                             <span>Позвонить</span>
                         </a>
-                  
+
                         <a class="teacher-whatsapp"
                            href="https://wa.me/${teacher.number.replace(/\D/g, "")}"
                            target="_blank"
                            rel="noopener noreferrer">
                             <span>WhatsApp</span>
                         </a>
-                  
+
                     </div>
                 </div>
 
@@ -671,6 +674,7 @@ function main() {
   initChangeUser();
   initSwitchWeek();
   initTeachersButton();
+  initSupportBtn();
   const savedUser = localStorage.getItem("scheduleUser");
   if (savedUser) {
     const user = findUser(savedUser);

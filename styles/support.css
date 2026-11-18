@@ -1,0 +1,20 @@
+.support-con {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.support-people {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.support-people:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 24px rgba(25, 25, 40, 0.08);
+}
