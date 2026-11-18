@@ -64,6 +64,12 @@ h1 {
   letter-spacing: -0.6px;
 }
 
+.btn-con {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .change-user {
   border: 1px solid var(--border);
   background: var(--surface);
